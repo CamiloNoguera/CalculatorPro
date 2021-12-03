@@ -1,4 +1,16 @@
 {
     "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin"
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx.base.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx.controls.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx.fxml.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx.graphics.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx.media.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx.swing.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx.web.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\javafx-swt.jar",
+        "f:\\CAMILO\\CAMILO\\MISIONTIC-2022\\PROGRAMACION\\CICLO_2_JAVA\\javafx-sdk-11.0.2\\lib\\sqlite-jdbc-3.36.0.1.jar"
+    ]
 }
