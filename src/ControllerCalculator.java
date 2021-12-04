@@ -1,8 +1,12 @@
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
 public class ControllerCalculator {
@@ -20,52 +24,26 @@ public class ControllerCalculator {
     private TextField Result;
 
     @FXML
-    private RadioButton Decimal1;
-
-    @FXML
-    private RadioButton Bin1;
-
-    @FXML
-    private RadioButton Octal1;
-
-    @FXML
-    private RadioButton Hexa1;
-
-    @FXML
-    private RadioButton Decimal2;
-
-    @FXML
-    private RadioButton Bin2;
-
-    @FXML
-    private RadioButton Octal2;
-
-    @FXML
-    private RadioButton Hexa2;
+    private ChoiceBox<String> Combo;
 
     @FXML
     void btnCalcular(ActionEvent event) {
-
+        //int op1 = Integer.parseInt(Cant.getText());
+        String op1 = Cant.getText();
+        Result.setText(op1);
     }
 
     @FXML
     void btnLimpiar(ActionEvent event) {
-
+        Cant.setText("");
+        Result.setText("");
+        Cant.requestFocus();
+        //Combo.
     }
 
     @FXML
     void initialize() {
-        assert Cant != null : "fx:id=\"Cant\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Result != null : "fx:id=\"Result\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Decimal1 != null : "fx:id=\"Decimal1\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Bin1 != null : "fx:id=\"Bin1\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Octal1 != null : "fx:id=\"Octal1\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Hexa1 != null : "fx:id=\"Hexa1\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Decimal2 != null : "fx:id=\"Decimal2\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Bin2 != null : "fx:id=\"Bin2\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Octal2 != null : "fx:id=\"Octal2\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-        assert Hexa2 != null : "fx:id=\"Hexa2\" was not injected: check your FXML file 'Interfaz_calculator.fxml'.";
-
+        ObservableList<String> list = FXCollections.observableArrayList("1. Binario a octal","2. Binario a decimal","3. Binario a hexadecimal","4. Octal a binario","5. Octal a decimal","6. Octal a hexadecimal","7. Decimal a binario","8. Decimal a octal","9. Decimal a hexadecimal","10. Hexadecimal a binario","11. Hexadecimal a octal","12. Hexadecimal a decimal");
+        Combo.setItems(list);
     }
 }
-
