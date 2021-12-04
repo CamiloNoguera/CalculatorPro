@@ -9,7 +9,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
 public class ControllerCalculator {
-
     @FXML
     private ResourceBundle resources;
 
@@ -86,7 +85,6 @@ public class ControllerCalculator {
             int decimal = hexadecimalADecimal(Cant.getText());
             String binarioResultante = decimalABinario(decimal);
             Result.setText(binarioResultante);
-
         }
         if(selectionCombo == "11. Hexadecimal a octal"){
             int decimal = hexadecimalADecimal(Cant.getText());
@@ -243,7 +241,6 @@ public class ControllerCalculator {
 
     @FXML
     void initialize() {
-        Combo.setItems(list);
-        
+        Combo.setItems(list); 
     }
 }
