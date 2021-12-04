@@ -1,6 +1,5 @@
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,20 +27,80 @@ public class ControllerCalculator {
 
     @FXML
     private Button btn;
-    ObservableList<String> list = FXCollections.observableArrayList("1. Binario a octal","2. Binario a decimal","3. Binario a hexadecimal","4. Octal a binario","5. Octal a decimal","6. Octal a hexadecimal","7. Decimal a binario","8. Decimal a octal","9. Decimal a hexadecimal","10. Hexadecimal a binario","11. Hexadecimal a octal","12. Hexadecimal a decimal");
+    ObservableList<String> list = FXCollections.observableArrayList(
+    "1. Binario a octal",
+    "2. Binario a decimal",
+    "3. Binario a hexadecimal",
+    "4. Octal a binario",
+    "5. Octal a decimal",
+    "6. Octal a hexadecimal",
+    "7. Decimal a binario",
+    "8. Decimal a octal",
+    "9. Decimal a hexadecimal",
+    "10. Hexadecimal a binario",
+    "11. Hexadecimal a octal",
+    "12. Hexadecimal a decimal");
 
     @FXML
     void btnCalcular(ActionEvent event) {
         int cantConvetir = Integer.parseInt(Cant.getText());
         String selectionCombo = Combo.getValue();
-        // Operaciones operacion = new Operaciones(cantConvetir);
 
         if(selectionCombo == "1. Binario a octal"){
             int decimal = binarioADecimal(cantConvetir);
             Result.setText(decimalAOctal(decimal));
         }
-        
-        
+        if(selectionCombo == "2. Binario a decimal"){
+            int decimal = binarioADecimal(cantConvetir);
+            Result.setText(String.valueOf(decimal));
+        }
+        if(selectionCombo == "3. Binario a hexadecimal"){
+            int decimal = binarioADecimal(cantConvetir);
+            Result.setText(decimalAHexadecimal(decimal));
+        }
+        if(selectionCombo == "4. Octal a binario"){
+            int decimal = octalADecimal(cantConvetir);
+            Result.setText(decimalABinario(decimal));
+        }
+        if(selectionCombo == "5. Octal a decimal"){
+            int decimal = octalADecimal(cantConvetir);
+            Result.setText(String.valueOf(decimal));
+        }
+        if(selectionCombo == "6. Octal a hexadecimal"){
+            int decimal = octalADecimal(cantConvetir);
+            Result.setText(decimalAHexadecimal(decimal));
+        }
+        if(selectionCombo == "7. Decimal a binario"){
+            String binarioResultante = decimalABinario(cantConvetir);
+            Result.setText(binarioResultante);
+        }
+        if(selectionCombo == "8. Decimal a octal"){
+            String octalResultante = decimalAOctal(cantConvetir);
+            Result.setText(octalResultante);
+        }
+        if(selectionCombo == "9. Decimal a hexadecimal"){
+            String hexadecimalResultante = decimalAHexadecimal(cantConvetir);
+            Result.setText(hexadecimalResultante);
+        }
+        if(selectionCombo == "10. Hexadecimal a binario"){
+            int decimal = hexadecimalADecimal(Cant.getText());
+            String binarioResultante = decimalABinario(decimal);
+            Result.setText(binarioResultante);
+
+        }
+        if(selectionCombo == "11. Hexadecimal a octal"){
+            int decimal = hexadecimalADecimal(Cant.getText());
+            String octalResultante = decimalAOctal(decimal);
+            Result.setText(octalResultante);
+        }
+        if(selectionCombo == "12. Hexadecimal a decimal"){
+            int decimal = hexadecimalADecimal(Cant.getText());
+            Result.setText(String.valueOf(decimal));
+        }
+        // Alert alerta = new Alert(Alert.AlertType.ERROR);
+        //         alerta.setTitle("Error");
+        //         alerta.setContentText("El operando 2, no puede ser 0");
+        //         alerta.showAndWait();
     }
 
         // Validadores
